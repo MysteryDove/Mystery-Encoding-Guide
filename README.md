@@ -6,7 +6,4 @@
 
 由于AVS已经十分古老，使用的必要性也已经极其有限，所以本教程主要使用Vapoursynth作为视频处理工具并且进行示例。
 
-
-
-
-
+test if gitbook synchronize this
