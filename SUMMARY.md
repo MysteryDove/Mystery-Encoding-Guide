@@ -16,5 +16,7 @@
 
 ## 从入门到入坟
 
-* [Untitled](cong-ru-men-dao-ru-fen/untitled.md)
+* [简介](cong-ru-men-dao-ru-fen/jian-jie.md)
+* [认识瑕疵](cong-ru-men-dao-ru-fen/untitled.md)
+* [反交错](cong-ru-men-dao-ru-fen/fan-jiao-cuo.md)
 
