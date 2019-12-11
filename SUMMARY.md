@@ -2,6 +2,7 @@
 
 * [写在前面](README.md)
 * [帮助编写！](bang-zhu-bian-xie.md)
+* [特别鸣谢](te-bie-ming-xie.md)
 * [什么是"压制"](what-is-encode.md)
 * [压制需要什么](ya-zhi-xu-yao-shen-me.md)
 * [神一样的工具们](shen-yi-yang-de-gong-ju-men/README.md)
