@@ -30,6 +30,8 @@ X264/X265的编译版本你都可以在这里找到：[http://msystem.waw.pl/x26
 
 这个页面里有非常多编译版本，X265通常选择右边Stable分支，适合你CPU指令集的编译版本，而使用GCC与VS 2019\(也就是MSVC\)编译的版本区别仅在压制速度上，通常可能MSVC编译的版本会运行起来更快一些
 
+**注意！我们推荐将X264/X265加入到系统的PATH中，在以后使用CLI编码时会方便很多**
+
 当然了，如果你要搞什么av1玩的话，我这里也就丢几个链接吧：
 
 rav1e：[https://github.com/xiph/rav1e](https://github.com/xiph/rav1e)
