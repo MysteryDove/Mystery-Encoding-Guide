@@ -17,14 +17,17 @@
 * [简单的……加点滤镜](kuai-su-shang-shou/jian-dan-de-jia-dian-lv-jing.md)
 * [编码，输出，还有封装](kuai-su-shang-shou/bian-ma-shu-chu-hai-you-feng-zhuang.md)
 
-## 从入门到入坟
+## 从入门到精通
+
+* [认识瑕疵](cong-ru-men-dao-jing-tong/untitled-1.md)
+* [编码器](cong-ru-men-dao-jing-tong/bian-ma-qi/README.md)
+  * [X264](cong-ru-men-dao-jing-tong/bian-ma-qi/x264.md)
+  * [X265](cong-ru-men-dao-jing-tong/bian-ma-qi/x265.md)
+* [认识交错与反交错](cong-ru-men-dao-jing-tong/fan-jiao-cuo.md)
+
+## 从精通到入坟 <a id="cong-ru-men-dao-ru-fen"></a>
 
 * [简介](cong-ru-men-dao-ru-fen/jian-jie.md)
-* [编码器](cong-ru-men-dao-ru-fen/bian-ma-qi/README.md)
-  * [X264](cong-ru-men-dao-ru-fen/bian-ma-qi/x264.md)
-  * [X265](cong-ru-men-dao-ru-fen/bian-ma-qi/x265.md)
-* [认识瑕疵](cong-ru-men-dao-ru-fen/untitled.md)
-* [认识交错与反交错](cong-ru-men-dao-ru-fen/fan-jiao-cuo.md)
 
 ## 滤镜/脚本百科 <a id="lv-jing-bai-ke"></a>
 
