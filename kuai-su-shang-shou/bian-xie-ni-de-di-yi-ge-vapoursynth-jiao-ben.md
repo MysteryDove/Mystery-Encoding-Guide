@@ -17,7 +17,7 @@ src8.set_output()
 
 其实Vapoursynth的语法与Python非常相似，VS脚本本质上都是Python脚本，语法都是根据Python来的，所以可以看到一般开头，都是一串import，载入必要的vs和常用的library，这里只是最简单的示例，所以仅载入了vs库。
 
-首先我们要通过这两行代码来载入vs的内核，并且指定好期望VS使用的内存容量，在执行vs.get\_core\(\)后，vs会自动载入所有第三方的dll滤镜，这些滤镜在portable环境中存放在”vapoursynth64\plugins“中。
+首先我们要通过这两行代码来载入vs的内核，并且指定好期望VS使用的内存容量，在执行`vs.get_core()`后，vs会自动载入所有第三方的dll滤镜，这些滤镜在portable环境中存放在”vapoursynth64\plugins“中。
 
 ```text
 core = vs.get_core()
@@ -39,11 +39,11 @@ src8 = core.lsmas.LWLibavSource(input)
 core.namespace.function()
 ```
 
-每个滤镜一般都有自己的namespace，在这个namespace下，有不同的function，比如举例的源滤镜使用的vslsmashsource.dll，其定义的namespace是lsmas，在这个namespace下有个函数叫做LWLibavSource\(\)，所以调用方式就是core.lsmas.LWLibavSource\(\)
+每个滤镜一般都有自己的namespace，在这个namespace下，有不同的function，比如举例的源滤镜使用的vslsmashsource.dll，其定义的namespace是`lsmas`，在这个namespace下有个函数叫做`LWLibavSource()`，所以调用方式就是`core.lsmas.LWLibavSource()`
 
 上面这段话是不是很罗嗦，连我都这么觉得。
 
-最后我们调用我们已经承接上读出的视频源的变量src8（它是一个VideoNode类！）的一个函数：set\_output\(\)
+最后我们调用我们已经承接上读出的视频源的变量src8（它是一个VideoNode类！）的一个函数：`set_output()`
 
 ```text
 src8.set_output()

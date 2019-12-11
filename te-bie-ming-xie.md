@@ -4,11 +4,13 @@
 
 压制组技术支持：[VCB-S](https://vcb-s.com/) 
 
-参考教程：
+参考网站：
 
 {% embed url="https://guide.encode.moe/" %}
 
 {% embed url="https://vcb-s.nmm-hd.org/" %}
+
+{% embed url="https://www.nmm-hd.org/" %}
 
 
 
