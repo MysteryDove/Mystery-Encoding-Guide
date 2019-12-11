@@ -62,7 +62,31 @@ core.std.MaskedMerge(nonedge, edge, mask, planes=[0,1,2], first_plane=False)
 
 如果想要进阶，成为优秀的压制者，大胆的向“从入门到入坟”进发吧！
 
+光说不练假把式，我们从引入第一个脚本库——mvsfunc开始简单的说起吧：
 
+`import mvsfunc as mvf` 
+
+我们在这不深究mvsfunc里到底有啥函数，为啥要import成mvf，你乐意import成啥就是啥，在这里我们就只用它的一个函数`Depth()`来示范
+
+```text
+import vapoursynth as vs
+import mvsfunc as mvf
+core = vs.get_core()
+core.max_cache_size = 4000    #什么？怎么从2000变成4000了？滤镜用多了多给点内存肯定没错！
+
+input = r'F:\233.mp4'
+src8 = core.lsmas.LWLibavSource(input)
+src16 = mvf.Depth(src8,16)    #这是啥？这是我们用mvf来把8bit输入源转换成16bit，你不信？可以试试src16.set_output()
+nr = core.knlm.KNLMeansCL(src16, d=1, a=2, s=4, h=1.5, wmode="3", device_type="GPU", device_id="0")
+db = core.f3kdb.Deband(nr, 12, 48, 32, 32, 0, 0, output_depth=16)
+down8 = mvf.Depth(db,8)       #最后我们把16bit处理完的clip重新缩回8bit来加字幕和输出
+out = core.sub.TextFile(down8,r'F:\subtitle.ass')
+out.set_output()
+```
+
+其中的KNLMeancCL是需要opencl运行环境的降噪滤镜，如果你是笔记本，可以试着把device\_id改成1来使用独显。f3kdb是非常常用的去色带滤镜，其中的参数我们暂时不具体讨论。
+
+到这里，我们已经编写出了最基本的“读入-降噪/去色带-加字幕-输出”脚本，接下来我们就要使用编码器来接收我们的输出，并且编码成成品视频了！
 
 
 
