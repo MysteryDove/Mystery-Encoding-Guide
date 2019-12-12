@@ -42,7 +42,7 @@
 
 `vspipe --y4m script.vpy - | x264 --demuxer y4m --preset veryslow --pass 2 --bitrate 5000 --threads 16 --deblock -1:-1 --keyint 240 --min-keyint 1 --bframes 8 --ref 6 --qcomp 0.70 --rc-lookahead 70 --aq-strength 0.7 --me tesa --psy-rd 0.6:0.15 --no-fast-pskip --colormatrix bt709 --aq-mode 3 --merange 37 --input-depth 8 -o "output.mp4" -`
 
-可以注意到，其实这两遍唯一的区别就是`--pass1 --pass 2` 
+可以注意到，其实这两遍唯一的区别就是`--pass 1 --pass 2` 
 
 在跑2pass方面， 直接用CLI还是比VSEdit方便的。
 
