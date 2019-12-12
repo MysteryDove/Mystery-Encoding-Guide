@@ -83,7 +83,7 @@ ffmpeg -i input.mkv -c:a copy output.mka
 
 这样就完事儿了，但是MKV有的时候还有章节，更多条音轨等内容，所以更推荐使用MeGUI来抽取
 
-我们在MeGUI的Tools里，选择HD Streams Extractor
+我们在MeGUI的Tools里，选择HD Streams Extractor，然后具体用法看图就完事儿了
 
 ![&#x754C;&#x9762;&#x7B80;&#x4ECB;](https://i.v2ex.co/3r4420x7.png)
 
@@ -95,7 +95,34 @@ ffmpeg -i input.mkv -c:a copy output.mka
 
 #### AAC:
 
+可以先参考这里来获得一些信息：[https://nazorip.site/archives/44/](https://nazorip.site/archives/44/)
 
+总的来说如果有aac编码需求，假设你的qaac以及ffmpeg都已经丢进PATH里了的话，你可以用ffmpeg来解码音频并且pipeline给qaac输出最终结果（注意，pipeline不能用powershell完成！）：
+
+```text
+ffmpeg -i input.mka -hide_banner -map a:0 -f wav pipe:|qaac64 -v 192 --adts -s --ignorelength - -o "output.aac" --threading
+```
+
+#### FLAC：
+
+如果你抽出来的音频流是无损的（基本都是PCM编码的wav），并且你也想无损的把它放进你的成品中，也想减小点体积的话，为什么不来试试神奇的flac呢？
+
+flac的用法真的非常简单，因为本来就是无损编码也不需要指定什么码率，如果编码的是wav的话，指定个输入就行了：
+
+```text
+flac input.wav
+```
+
+然后你就能获得和输入文件同名的flac文件了
+
+当然了，如果你要把其他格式转换成flac的话（转换之前先想清楚自己做的是不是有损→无损的睿智操作），建议还是先用ffmpeg转换成wav再进行进一步操作
+
+```text
+ffmpeg -i input.mka input.wav
+flac input.wav
+```
+
+关于flac其他的参数，可以自行查阅doc，这里就不多做介绍了
 
 ## 封装
 
@@ -104,6 +131,18 @@ ffmpeg -i input.mkv -c:a copy output.mka
 #### MP4：
 
 封装MP4需要有很多的注意点，因为MP4是ISO组织定下的标准，所以它的兼容性要求非常高，能够封装进去的音频格式比较有限，例如flac什么的就没法封装进去，所以丢不进去就考虑把音频重新编码一下
+
+但是不要考虑那么多，反正记住**mp4里抽出来的音频怎么都能封进mp4里，mkv里抽出来的就不一定了**就是了。
+
+MP4封装仍然推荐MeGUI的MP4 Muxer，你可以在Tools-Muxer里找到它，至于怎么用看图就是了，记得按queue开始封装
+
+![&#x754C;&#x9762;&#x7B80;&#x4ECB;](https://i.v2ex.co/SMti27TH.png)
+
+#### MKV:
+
+MKV作为万能容器，基本上什么都能往里面塞，封装mkv的工具我们一般使用mkvtoolnix，你可以在工具章节的封装工具中找到它
+
+
 
 
 
