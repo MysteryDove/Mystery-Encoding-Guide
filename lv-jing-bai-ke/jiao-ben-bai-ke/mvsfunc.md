@@ -21,37 +21,26 @@ mvsfunc需要的滤镜有：
 
 ####  参数解释：
 
-`input`：
-
-参数变量类型需为`VideoNode`，几乎所有Format都可以丢进本函数，反正基本什么都能用
-
-`sample`：
-
-参数变量类型为`int`，数值范围为`1-16/32`需要注意的是1-7bit的数据都会被储存为8bit，默认与输入Clip的位深相同
-
-`fulls`：
-
-参数变量类型为`bool`，该项指定输入片源是否为Full Range，默认为None，但是推荐YUV/GRAY输入时使用`False`，RGB/YCgCo输入时使用`True`
-
-`fulld`：
-
-参数变量类型为`bool`，该项指定输出片源是否为Full Range，默认与`fulls`的值相同
-
-`dither`：
-
-
-
-`useZ`：
-
-`prefer_props`：
-
-`ampo`：
-
-`ampn`：
-
-`dyn`：
-
-`staticnoise`：
+* `input`：
+  * 参数变量类型需为`VideoNode`
+  * 几乎所有Format都可以丢进本函数，反正基本什么都能用
+* `sample`：
+  * 参数变量类型为`int`
+  * 数值范围为`1-16/32`
+  * 需要注意的是1-7bit的数据都会被储存为8bit，默认与输入Clip的位深相同
+* `fulls`：
+  * 参数变量类型为`bool`
+  * 该项指定输入片源是否为Full Range，默认为None，但是推荐YUV/GRAY输入时使用`False`，RGB/YCgCo输入时使用`True`
+* `fulld`：
+  * 参数变量类型为`bool`
+  * 该项指定输出片源是否为Full Range，默认与`fulls`的值相同、
+* `dither`：
+* `useZ`：
+* `prefer_props`：
+* `ampo`：
+* `ampn`：
+* `dyn`：
+* `staticnoise`：
 
 #### 使用贴士：
 
