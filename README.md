@@ -6,3 +6,9 @@
 
 由于AVS已经十分古老，使用的必要性也已经极其有限，所以本教程主要使用Vapoursynth作为视频处理工具并且主要在Windows平台下进行示例（你既然都用OS X/Linux了，那……）。
 
+本教程采用[知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/)进行许可，在分享和转发，或者使用到本教程片段时请注明出处。
+
+
+
+![](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
+
