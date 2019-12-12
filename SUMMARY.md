@@ -13,6 +13,7 @@
 
 ## 快速上手
 
+* [分析片源](kuai-su-shang-shou/fen-xi-pian-yuan.md)
 * [编写你的第一个Vapoursynth脚本](kuai-su-shang-shou/bian-xie-ni-de-di-yi-ge-vapoursynth-jiao-ben.md)
 * [简单的……加点滤镜](kuai-su-shang-shou/jian-dan-de-jia-dian-lv-jing.md)
 * [编码，输出，还有封装](kuai-su-shang-shou/bian-ma-shu-chu-hai-you-feng-zhuang.md)
