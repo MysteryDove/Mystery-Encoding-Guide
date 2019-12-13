@@ -39,9 +39,9 @@ src8 = core.lsmas.LWLibavSource(input)
 core.namespace.function()
 ```
 
-每个滤镜一般都有自己的namespace，在这个namespace下，有不同的function，比如举例的源滤镜使用的vslsmashsource.dll，其定义的namespace是`lsmas`，在这个namespace下有个函数叫做`LWLibavSource()`，所以调用方式就是`core.lsmas.LWLibavSource()`
+每个滤镜一般都有自己的namespace，在运行`core = vs.get_core()`时，vs会自动加载插件目录下所有滤镜，并且把他们的namespace读出来，而在这些namespace下，有不同的function。
 
-上面这段话是不是很罗嗦，连我都这么觉得。
+比如举例的源滤镜使用的vslsmashsource.dll，其定义的namespace是`lsmas`，在这个namespace下有个函数叫做`LWLibavSource()`，所以调用方式就是`core.lsmas.LWLibavSource()`
 
 最后我们调用我们已经承接上读出的视频源的变量src8（它是一个VideoNode类！）的一个函数：`set_output()`
 
