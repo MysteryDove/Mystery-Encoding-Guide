@@ -44,3 +44,9 @@ vcb-s出品工具之二，能够解析蓝光原盘的playlist，提取并编辑�
 
 同样的，如果你有能力帮助我们完善这个软件或者发现了bug，欢迎来提Issue与PR
 
+## AssFontSubset
+
+油总出品的字体子集内封工具，使用它需要用`pip`安装`fonttools`
+
+使用方法和下载地址（release里下载）：[https://github.com/youlun/AssFontSubset](https://github.com/youlun/AssFontSubset)
+
