@@ -22,10 +22,12 @@
 ## 从入门到精通
 
 * [认识瑕疵](cong-ru-men-dao-jing-tong/untitled-1.md)
+* [认识画面的三要素](cong-ru-men-dao-jing-tong/ren-shi-hua-mian-de-san-yao-su.md)
+* [认识交错与反交错](cong-ru-men-dao-jing-tong/fan-jiao-cuo.md)
 * [编码器](cong-ru-men-dao-jing-tong/bian-ma-qi/README.md)
+  * [Untitled](cong-ru-men-dao-jing-tong/bian-ma-qi/untitled.md)
   * [X264](cong-ru-men-dao-jing-tong/bian-ma-qi/x264.md)
   * [X265](cong-ru-men-dao-jing-tong/bian-ma-qi/x265.md)
-* [认识交错与反交错](cong-ru-men-dao-jing-tong/fan-jiao-cuo.md)
 
 ## 从精通到入坟 <a id="cong-ru-men-dao-ru-fen"></a>
 
