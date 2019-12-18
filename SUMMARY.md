@@ -24,6 +24,7 @@
 * [认识瑕疵](cong-ru-men-dao-jing-tong/untitled-1.md)
 * [认识画面的三要素](cong-ru-men-dao-jing-tong/ren-shi-hua-mian-de-san-yao-su.md)
 * [色彩/位深](cong-ru-men-dao-jing-tong/se-cai-wei-shen.md)
+* [色带处理](cong-ru-men-dao-jing-tong/se-dai-chu-li.md)
 * [认识交错与反交错](cong-ru-men-dao-jing-tong/fan-jiao-cuo.md)
 * [编码器](cong-ru-men-dao-jing-tong/bian-ma-qi/README.md)
   * [写在前面](cong-ru-men-dao-jing-tong/bian-ma-qi/untitled.md)
