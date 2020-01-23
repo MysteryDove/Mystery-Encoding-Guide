@@ -40,7 +40,7 @@ YUV模型有很多具体的实现方式，而日常我们接触最多的就是YC
 
 尽管8bit RGB已经足够表现 [Rec. 709](https://en.wikipedia.org/wiki/Rec._709)或者 [sRGB](https://en.wikipedia.org/wiki/SRGB)的颜色了，但是，嘿！我们这可是`YUV420P8`呢，色带有些时候总是不可避免的，甚至连8bit RGB都是如此！
 
-如果你有一块8bit显示器，在正确打开[这张图](https://drive.google.com/open?id=1JoLezJJGeY8jAn0PXiAs-RCdaP9TLUUL)的时候，就会看到明显的色带！
+如果你有一块8bit或更低色彩深度的显示器，在正确打开[这张图](https://drive.google.com/open?id=1JoLezJJGeY8jAn0PXiAs-RCdaP9TLUUL)的时候，就会看到明显的色带！
 
 那么，我们有什么办法，可以阻止色带的产生呢？那就请看下集：色带处理
 
