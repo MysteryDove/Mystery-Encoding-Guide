@@ -57,11 +57,11 @@ BM3D滤镜辅助函数用于RGB色彩空间与OPP色彩空间的相互转换。
 
 将RGB色彩空间转换至OPP色彩空间。
 
-##### 参数一览：
+**参数一览：**
 
 `bm3d.RGB2OPP(clip input[, int sample=0])`
 
-##### 参数解释：
+**参数解释：**
 
 * `input`：
   * 参数变量类型为`VideoNode`
@@ -76,11 +76,11 @@ BM3D滤镜辅助函数用于RGB色彩空间与OPP色彩空间的相互转换。
 
 将OPP色彩空间转换至RGB色彩空间。
 
-##### 参数一览：
+**参数一览：**
 
 `bm3d.OPP2RGB(clip input[, int sample=0])`
 
-##### 参数解释：
+**参数解释：**
 
 * `input`：
   * 参数变量类型为`VideoNode`
@@ -98,11 +98,11 @@ BM3D滤镜辅助函数用于RGB色彩空间与OPP色彩空间的相互转换。
 
 基础降噪函数，BM3D核心处理函数之一，其输出结果可以作为BM3D另一核心处理函数`bm3d.Final()`的参考源，也可直接作为降噪结果使用。
 
-##### 参数一览：
+**参数一览：**
 
 `bm3d.Basic(clip input[, clip ref=input, string profile="fast", float[] sigma=[10,10,10], int block_size, int block_step, int group_size, int bm_range, int bm_step, float th_mse, float hard_thr, int matrix=2])`
 
-##### 参数解释：
+**参数解释：**
 
 * `input`：
   * 参数变量类型为`VideoNode`
@@ -121,11 +121,11 @@ BM3D滤镜辅助函数用于RGB色彩空间与OPP色彩空间的相互转换。
     * `high`：高强度模式
     * `vn`：超强噪点模式
 * `sigma`：
-  *  参数变量类型为`float`数组
-  *  设定各平面的降噪强度，单个平面范围为`[0, +inf)`，默认值为`[10, 10, 10]`
-  *  BM3D算法对`sigma`参数非常敏感，应当认真根据输入源调整该参数
-  *  该参数源自高斯白噪声模型
-  *  当某一平面参数为0时，不处理该平面
+  * 参数变量类型为`float`数组
+  * 设定各平面的降噪强度，单个平面范围为`[0, +inf)`，默认值为`[10, 10, 10]`
+  * BM3D算法对`sigma`参数非常敏感，应当认真根据输入源调整该参数
+  * 该参数源自高斯白噪声模型
+  * 当某一平面参数为0时，不处理该平面
 * `block_size`：
   * 参数变量类型为`int`
   * 设定块大小，块大小为`block_size*block_size`，范围为`[1, 64]`
@@ -180,11 +180,11 @@ BM3D滤镜辅助函数用于RGB色彩空间与OPP色彩空间的相互转换。
 
 最终降噪函数，BM3D核心处理函数之二，需要使用`bm3d.Basic()`的处理结果作为参考源。
 
-##### 参数一览：
+**参数一览：**
 
 `bm3d.Final(clip input, clip ref[, string profile="fast", float[] sigma=[10,10,10], int block_size, int block_step, int group_size, int bm_range, int bm_step, float th_mse, int matrix=2])`
 
-##### 参数解释：
+**参数解释：**
 
 * `input`：
   * 参数变量类型为`VideoNode`
@@ -209,11 +209,11 @@ V-BM3D在BM3D的基础上增加了时域处理。具体而言，在块匹配和�
 
 基础降噪函数，V-BM3D核心处理函数之一，与`bm3d.Basic()`类似，增加了时域处理。
 
-##### 参数一览：
+**参数一览：**
 
 `bm3d.VBasic(clip input[, clip ref=input, string profile="fast", float[] sigma=[10,10,10], int radius, int block_size, int block_step, int group_size, int bm_range, int bm_step, int ps_num, int ps_range, int ps_step, float th_mse, float hard_thr, int matrix=2])`
 
-##### 参数解释：
+**参数解释：**
 
 * `input`、`ref`：
   * 与`bm3d.Basic()`相应参数含义相同
@@ -240,11 +240,11 @@ V-BM3D在BM3D的基础上增加了时域处理。具体而言，在块匹配和�
 
 最终降噪函数，V-BM3D核心处理函数之二，与`bm3d.Final()`类似，增加了时域处理。
 
-##### 参数一览：
+**参数一览：**
 
 `bm3d.VFinal(clip input, clip ref[, string profile="fast", float[] sigma=[10,10,10], int radius, int block_size, int block_step, int group_size, int bm_range, int bm_step, int ps_num, int ps_range, int ps_step, float th_mse, int matrix=2])`
 
-##### 参数解释：
+**参数解释：**
 
 * `input`、`ref`：
   * 与`bm3d.Final()`相应参数含义相同
@@ -261,11 +261,11 @@ V-BM3D在BM3D的基础上增加了时域处理。具体而言，在块匹配和�
 
 如果以RGB格式为`bm3d.VBasic()`或`bm3d.VFinal()`函数的输入，需要在调用该函数后，再调用`bm3d.OPP2RGB()`。
 
-##### 参数一览：
+**参数一览：**
 
 `bm3d.VAggregate(clip input[, int radius=1, int sample=0])`
 
-##### 参数解释：
+**参数解释：**
 
 * `input`：
   * 参数变量类型为`VideoNode`
@@ -283,7 +283,7 @@ V-BM3D在BM3D的基础上增加了时域处理。具体而言，在块匹配和�
 
 在BM3D滤镜的四个核心处理函数`bm3d.Basic()`、`bm3d.Final()`、`bm3d.VBasic()`、`bm3d.VFinal()`中，通过设定`profile`参数可以选择不同的预设模式，这些预设模式对函数其他参数给定了不同的默认值，详见下面三个表格
 
-```
+```text
 bm3d.Basic / bm3d.Final / bm3d.VBasic / bm3d.VFinal
 ----------------------------------------------------------------------------
 | profile || block_size | block_step | group_size  | bm_range    | bm_step |
@@ -295,7 +295,8 @@ bm3d.Basic / bm3d.Final / bm3d.VBasic / bm3d.VFinal
 | "vn"    || 8/11/8/11  | 4/6/4/6    | 32/32/16/16 | 16/16/12/12 | 1/1/1/1 |
 ----------------------------------------------------------------------------
 ```
-```
+
+```text
 bm3d.VBasic / bm3d.VFinal
 ---------------------------------------------------
 | profile || radius | ps_num | ps_range | ps_step |
@@ -307,7 +308,8 @@ bm3d.VBasic / bm3d.VFinal
 | "vn"    || 4/4    | 2/2    | 5/6      | 1/1/1/1 |
 ---------------------------------------------------
 ```
-```
+
+```text
 bm3d.Basic & bm3d.VBasic / bm3d.Final & bm3d.VFinal
 --------------------------------------------------------------
 | profile || th_mse                              | hard_thr  |
@@ -329,80 +331,99 @@ bm3d.Basic & bm3d.VBasic / bm3d.Final & bm3d.VFinal
 #### 使用BM3D系列函数：
 
 * 输入源为YUV格式，仅使用基础降噪函数进行降噪，并对Y、U、V平面设定不同的`sigma`值
-```python
-flt = core.bm3d.Basic(src, sigma=[10,6,8])
-```
+
+  ```python
+  flt = core.bm3d.Basic(src, sigma=[10,6,8])
+  ```
+
 * 输入源为YUV格式，使用基础降噪函数+最终降噪函数进行降噪，并对U、V平面设定相同的`sigma`值
-```python
-ref = core.bm3d.Basic(src, sigma=[10,7])
-flt = core.bm3d.Final(src, ref, sigma=[10,7])
-```
+
+  ```python
+  ref = core.bm3d.Basic(src, sigma=[10,7])
+  flt = core.bm3d.Final(src, ref, sigma=[10,7])
+  ```
+
 * 输入源为YUV格式，引入额外的降噪滤镜作为预处理，将其降噪结果作为基础降噪函数的参考源，并对Y、U、V平面设定相同的`sigma`值
-```python
-pre = haf.sbr(src, 3)
-ref = core.bm3d.Basic(src, pre, sigma=7)
-flt = core.bm3d.Final(src, ref, sigma=7)
-```
+
+  ```python
+  pre = haf.sbr(src, 3)
+  ref = core.bm3d.Basic(src, pre, sigma=7)
+  flt = core.bm3d.Final(src, ref, sigma=7)
+  ```
+
 * 输入源为RGB格式，先转换为OPP格式，在BM3D滤镜内部使用OPP格式降噪，并转回RGB输出
-```python
-src = core.bm3d.RGB2OPP(src)
-ref = core.bm3d.Basic(src, matrix=100)
-flt = core.bm3d.Final(src, ref, matrix=100)
-flt = core.bm3d.OPP2RGB(flt)
-```
+
+  ```python
+  src = core.bm3d.RGB2OPP(src)
+  ref = core.bm3d.Basic(src, matrix=100)
+  flt = core.bm3d.Final(src, ref, matrix=100)
+  flt = core.bm3d.OPP2RGB(flt)
+  ```
 
 #### 使用V-BM3D系列函数：
 
 再次提醒，使用V-BM3D系列函数，必须在降噪函数`bm3d.VBasic()`和`bm3d.VFinal()`后使用`bm3d.VAggregate()`函数。
 
 * 输入源为RGB格式，先转换为OPP格式，在BM3D滤镜内部使用OPP格式降噪，并转回RGB输出
-```python
-src = core.bm3d.RGB2OPP(src)
-ref = core.bm3d.VBasic(src, radius=1, matrix=100).bm3d.VAggregate(radius=1)
-flt = core.bm3d.VFinal(src, ref, radius=1, matrix=100).bm3d.VAggregate(radius=1)
-flt = core.bm3d.OPP2RGB(flt)
-```
+
+  ```python
+  src = core.bm3d.RGB2OPP(src)
+  ref = core.bm3d.VBasic(src, radius=1, matrix=100).bm3d.VAggregate(radius=1)
+  flt = core.bm3d.VFinal(src, ref, radius=1, matrix=100).bm3d.VAggregate(radius=1)
+  flt = core.bm3d.OPP2RGB(flt)
+  ```
+
 * 输入源为RGB格式，若在转换成OPP格式后，不对色度平面进行处理，需要使用`std.ShufflePlanes()`函数将未处理的色度平面与BM3D的降噪结果合并
-```python
-src = core.bm3d.RGB2OPP(src)
-ref = core.bm3d.VBasic(src, sigma=[10,0,0], radius=1, matrix=100).bm3d.VAggregate(radius=1)
-flt = core.bm3d.VFinal(src, ref, sigma=[10,0,0], radius=1, matrix=100).bm3d.VAggregate(radius=1)
-flt = core.std.ShufflePlanes([flt,src,src], [0,1,2], vs.YUV)
-flt = core.bm3d.OPP2RGB(flt)
-```
+
+  ```python
+  src = core.bm3d.RGB2OPP(src)
+  ref = core.bm3d.VBasic(src, sigma=[10,0,0], radius=1, matrix=100).bm3d.VAggregate(radius=1)
+  flt = core.bm3d.VFinal(src, ref, sigma=[10,0,0], radius=1, matrix=100).bm3d.VAggregate(radius=1)
+  flt = core.std.ShufflePlanes([flt,src,src], [0,1,2], vs.YUV)
+  flt = core.bm3d.OPP2RGB(flt)
+  ```
+
 * 对于上一个例子，更好地做法是在灰度空间下降噪，可以大幅降低内存占用
-```python
-src = core.bm3d.RGB2OPP(src)
-srcGray = core.std.ShufflePlanes(src, 0, vs.GRAY)
-ref = core.bm3d.VBasic(srcGray, sigma=[10,0,0], radius=1, matrix=100).bm3d.VAggregate(radius=1)
-flt = core.bm3d.VFinal(srcGray, ref, sigma=[10,0,0], radius=1, matrix=100).bm3d.VAggregate(radius=1)
-flt = core.std.ShufflePlanes([flt,src,src], [0,1,2], vs.YUV)
-flt = core.bm3d.OPP2RGB(flt)
-```
+
+  ```python
+  src = core.bm3d.RGB2OPP(src)
+  srcGray = core.std.ShufflePlanes(src, 0, vs.GRAY)
+  ref = core.bm3d.VBasic(srcGray, sigma=[10,0,0], radius=1, matrix=100).bm3d.VAggregate(radius=1)
+  flt = core.bm3d.VFinal(srcGray, ref, sigma=[10,0,0], radius=1, matrix=100).bm3d.VAggregate(radius=1)
+  flt = core.std.ShufflePlanes([flt,src,src], [0,1,2], vs.YUV)
+  flt = core.bm3d.OPP2RGB(flt)
+  ```
+
 * 输入源为RGB格式，若在转换成OPP格式后，不对亮度平面进行处理，则由于块匹配基于`ref`的亮度平面，对`ref`也需要使用`std.ShufflePlanes()`进行合并
-```python
-src = core.bm3d.RGB2OPP(src)
-ref = core.bm3d.VBasic(src, sigma=[0,10,10], radius=1, matrix=100).bm3d.VAggregate(radius=1)
-ref = core.std.ShufflePlanes([src,ref,ref], [0,1,2], vs.YUV)
-flt = core.bm3d.VFinal(src, ref, sigma=[0,10,10], radius=1, matrix=100).bm3d.VAggregate(radius=1)
-flt = core.std.ShufflePlanes([src,flt,flt], [0,1,2], vs.YUV)
-flt = core.bm3d.OPP2RGB(flt)
-```
+
+  ```python
+  src = core.bm3d.RGB2OPP(src)
+  ref = core.bm3d.VBasic(src, sigma=[0,10,10], radius=1, matrix=100).bm3d.VAggregate(radius=1)
+  ref = core.std.ShufflePlanes([src,ref,ref], [0,1,2], vs.YUV)
+  flt = core.bm3d.VFinal(src, ref, sigma=[0,10,10], radius=1, matrix=100).bm3d.VAggregate(radius=1)
+  flt = core.std.ShufflePlanes([src,flt,flt], [0,1,2], vs.YUV)
+  flt = core.bm3d.OPP2RGB(flt)
+  ```
+
 * 对于上一个例子，也可使用`bm3d.Basic()`代替`bm3d.VBasic()`，更快、更省内存
-```python
-src = core.bm3d.RGB2OPP(src)
-ref = core.bm3d.Basic(src, matrix=100)
-flt = core.bm3d.VFinal(src, ref, radius=1, matrix=100).bm3d.VAggregate(radius=1)
-flt = core.bm3d.OPP2RGB(flt)
-```
+
+  ```python
+  src = core.bm3d.RGB2OPP(src)
+  ref = core.bm3d.Basic(src, matrix=100)
+  flt = core.bm3d.VFinal(src, ref, radius=1, matrix=100).bm3d.VAggregate(radius=1)
+  flt = core.bm3d.OPP2RGB(flt)
+  ```
+
 * 使用自定义降噪滤镜作为基础降噪结果，并使用V-BM3D的最终降噪函数做精细化处理
+
   这样做可以在两种降噪滤镜间取长补短。在下面的例子中，SMDegrain滤镜在时空平滑上很有效，但可能导致鬼影（blending）和细节损失，V-BM3D可以很好地保留细节，但对于大的噪声pattern（例如粗颗粒）效果不好
-```python
-src = core.bm3d.RGB2OPP(src)
-ref = haf.SMDegrain(src)
-flt = core.bm3d.VFinal(src, ref, radius=1, matrix=100).bm3d.VAggregate(radius=1)
-flt = core.bm3d.OPP2RGB(flt)
-```
+
+  ```python
+  src = core.bm3d.RGB2OPP(src)
+  ref = haf.SMDegrain(src)
+  flt = core.bm3d.VFinal(src, ref, radius=1, matrix=100).bm3d.VAggregate(radius=1)
+  flt = core.bm3d.OPP2RGB(flt)
+  ```
 
 ### 通过`mvsfunc`脚本使用：
 
@@ -426,7 +447,7 @@ flt = mvf.BM3D(src, sigma=3.0, radius1=1, profile1="fast")
 
 ## 扩展阅读：
 
-BM3D算法于2007年由芬兰坦佩雷理工大学的Kostadin Dabov等人提出，全称为Block-matching and 3D filtering，可译为三维块匹配算法。BM3D算法的原始论文为**Image Denoising by Sparse 3-D Transform-Domain Collaborative Filtering, *IEEE Transactions on image processing 16.8 (2007): 2080-2095***，我们来简要了解一下这篇论文。
+BM3D算法于2007年由芬兰坦佩雷理工大学的Kostadin Dabov等人提出，全称为Block-matching and 3D filtering，可译为三维块匹配算法。BM3D算法的原始论文为**Image Denoising by Sparse 3-D Transform-Domain Collaborative Filtering,** _**IEEE Transactions on image processing 16.8 \(2007\): 2080-2095**_，我们来简要了解一下这篇论文。
 
 论文主体包括概念说明、算法思路、快速算法、从灰度到RGB的扩展、降噪效果这几个部分。我们仅简要介绍算法思路，并说明相关概念，想了解其余部分可阅读原始论文。
 
@@ -436,22 +457,30 @@ BM3D算法于2007年由芬兰坦佩雷理工大学的Kostadin Dabov等人提出�
 
 * **基础估计**
   * **块估计**
+
     对含噪点图像的每个块进行如下操作
+
     * **分组**：进行块匹配，在一定范围内寻找相似的块，将它们存储到一个三维数组中，称为组（group）
     * **协同硬阈值滤波**（Collaborative hard-thresholding）：对上述group进行三维变换，在频域下进行硬阈值滤波，然后进行逆变换还原，并将块复原至原始位置
+
   * **聚合**（Aggregation）
+
     对所有重叠的估计块进行加权平均，计算得到真实图像的基础估计结果（即基础降噪结果）
 * **最终估计**
   * **块估计**
+
     对输入图像的每个块进行如下操作
+
     * **分组**：对基础估计结果进行块匹配，在一定范围内确定相似块的位置，基于这些位置生成两个group，一个group来自含噪点图像，另一个group来自基础估计结果
     * **协同维纳滤波**（Collaborative Wiener filtering）：对上述两个group进行三维变换，基于基础估计结果，对含噪点的group进行维纳滤波，然后进行逆变换还原，并将块复原至原始位置
+
   * **聚合**
+
     对得到的估计块进行加权平均，计算得到真实图像的最终估计结果（即最终降噪结果）
 
 上述过程可以如下图描述。
 
-![BM3D算法示意图](https://i.loli.net/2020/01/29/EY1KbZtwe7p2kAB.jpg)
+![BM3D&#x7B97;&#x6CD5;&#x793A;&#x610F;&#x56FE;](https://i.loli.net/2020/01/29/EY1KbZtwe7p2kAB.jpg)
 
 ### 概念解释：
 
@@ -462,3 +491,4 @@ BM3D算法于2007年由芬兰坦佩雷理工大学的Kostadin Dabov等人提出�
 * **硬阈值**（Hard-thresholding）：在变换域下，真实图像与噪点的系数存在差别，真实图像系数较大，噪点系数较小。可以基于这种差别进行降噪。直接的方法便是设定阈值，将真实图像与噪点区分开来，故称硬阈值。在BM3D算法的基础估计部分，通过硬阈值滤波进行降噪，得到基础估计结果。
 * **收缩**（Shrinkage）：在变换域下降噪，可以对系数较小的部分做收缩，能使降噪的结果更接近真实图像。在BM3D算法的最终估计部分，基于基础估计结果得到经验维纳收缩系数（empirical Wiener shrinkage coefficients），进行维纳滤波，得到最终估计结果。
 * **协同滤波**（Collaborative Filtering）：“协同”可以从字面意义上理解，指一个group内的每个块都协作进行对其他块的滤波。在BM3D算法中，协同滤波通过变换域下的收缩实现，包括协同硬阈值滤波和协同维纳滤波。
+
