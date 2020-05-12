@@ -57,6 +57,10 @@ output = core.std.ShufflePlanes([noise,src16], planes=[0, 1, 2], colorfamily=vs.
 
 很显然的，大部分噪点其实出在比较暗的地方，较亮地方的噪点用打噪点也没办法很好的糊弄过去，较暗的地方打噪点效果就比较好，那么有没有一种办法，能够让噪点打在暗的地方呢？
 
+{% hint style="info" %}
+以下部分需要对：std.Expr\(\)有一定程度的理解，对std.MaskedMerge有一定程度的理解
+{% endhint %}
+
 这时候就需要一些简单的数学知识了：
 
 首先我们创建一个blankclip，所有像素的值都是32768，再对这个clip进行加噪：

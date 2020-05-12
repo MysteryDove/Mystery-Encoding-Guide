@@ -18,6 +18,7 @@
 * [简单的……加点滤镜](kuai-su-shang-shou/jian-dan-de-jia-dian-lv-jing.md)
 * [编码，输出，还有封装](kuai-su-shang-shou/bian-ma-shu-chu-hai-you-feng-zhuang.md)
 * [最后的检查与一些小技巧](kuai-su-shang-shou/zui-hou-de-jian-cha-yu-yi-xie-xiao-ji-qiao.md)
+* [番外篇：在Premiere输出时使用Vapoursynth](kuai-su-shang-shou/fan-wai-pian-zai-premiere-shu-chu-shi-shi-yong-vapoursynth.md)
 
 ## 从入门到精通
 
