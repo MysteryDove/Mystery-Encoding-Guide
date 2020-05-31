@@ -68,6 +68,7 @@
   * [RemoveGrain](lv-jing-bai-ke/jiang-zao-lv-jing/removegrain.md)
   * [BM3D/V-BM3D](lv-jing-bai-ke/jiang-zao-lv-jing/bm3d-v-bm3d.md)
   * [Bilateral](lv-jing-bai-ke/jiang-zao-lv-jing/bilateral.md)
+* [std滤镜](lv-jing-bai-ke/std-lv-jing.md)
 * [字幕滤镜](lv-jing-bai-ke/zi-mu-lv-jing/README.md)
   * [VSFilter](lv-jing-bai-ke/zi-mu-lv-jing/vsfilter.md)
   * [VSFilterMod](lv-jing-bai-ke/zi-mu-lv-jing/vsfiltermod.md)
